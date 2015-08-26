@@ -14,7 +14,7 @@ app.get('/', function(req, res){
             content = err;
         }
         else {
-            console.log(data);
+            //console.log(data);
             content = util.format(data, color, process.argv[2]);
         }
         res.send(content);
