@@ -21,6 +21,6 @@ app.get('/', function(req, res){
     })
 });
 
-app.listen(3000, function(){
-    console.log('server started on localhost:3000');
+app.listen(80, function(){
+    console.log('server started on localhost:80');
 });
