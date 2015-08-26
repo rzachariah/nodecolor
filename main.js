@@ -1,6 +1,6 @@
 var express = require('express');
 var util = require('util');
-var randomColor = require('randomColor');
+var randomColor = require('randomcolor');
 var fs = require('fs');
 
 var app = express();
