@@ -4,9 +4,7 @@ machine:
 
 dependencies:
   override:
-    - docker info
-    - node -v
-    - npm -v
+    - echo "override section"
 
 test:
   override:
@@ -20,7 +18,8 @@ deployment:
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       # - docker push robzhu/nodecolor
       # - install the rancher-upgrade-prep tool
-      - git clone https://github.com/robzhu/rancher-upgrade-prep .
+      - git clone https://github.com/robzhu/rancher-upgrade-prep
+      - mv rancher-upgrade-prep/* ./*
       - npm install
       - sudo chmod +x ./deploy_to_rancher.sh
       - sudo ./deploy_to_rancher.sh
