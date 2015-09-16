@@ -14,9 +14,8 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker build -t robzhu/nodecolor .
+      # - docker build -t robzhu/nodecolor .
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - printenv CIRCLE_BUILD_NUM
       # - docker push robzhu/nodecolor
       - sudo chmod +x ./deploy_to_rancher.sh
       - sudo ./deploy_to_rancher.sh
