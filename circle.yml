@@ -5,6 +5,8 @@ machine:
 dependencies:
   override:
     - docker info
+    - node -v
+    - npm -v
 
 test:
   override:
