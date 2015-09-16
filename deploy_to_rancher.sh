@@ -8,9 +8,6 @@ if !$DEPLOY_ON_PASS; then
     exit;
 fi
 
-echo "installing the rancher-upgrade-prep tool"
-git clone https://github.com/robzhu/rancher-upgrade-prep
-cp -a ./rancher-upgrade-prep/. ./
-npm install
+node main.js docker-compose.yml webspike webspike-39
 
 echo "Deploying to rancher server: ${RANCHER_URL}"
