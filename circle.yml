@@ -18,7 +18,9 @@ deployment:
       # - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       # - docker push robzhu/nodecolor
       # - install the rancher-upgrade-prep tool
-      # - git clone https://github.com/robzhu/rancher-upgrade-prep prep
+      - git clone https://github.com/robzhu/rancher-upgrade-prep prep
+      - cd prep && npm install
+      - ls -l prep
       # - mv package.json package_main.json
       # - mv prep/main.js ./prep.js
       # - mv prep/package.json ./package.json
@@ -35,5 +37,5 @@ deployment:
       # - node ./upgrade.js
       # - sudo chmod +x ./deploy_to_rancher.sh
       # - sudo ./deploy_to_rancher.sh
-      - sudo chmod +x ./prep_new_compose.sh
-      - sudo ./prep_new_compose.sh
+      # - sudo chmod +x ./prep_new_compose.sh
+      # - sudo ./prep_new_compose.sh
