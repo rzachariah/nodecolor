@@ -1,7 +1,8 @@
 machine:
   services:
     - docker
-    - node
+  node:
+    version: 0.12.27
 
 dependencies:
   override:
