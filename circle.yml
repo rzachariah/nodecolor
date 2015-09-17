@@ -33,5 +33,7 @@ deployment:
 
       # - npm install
       # - node ./upgrade.js
-      - sudo chmod +x ./deploy_to_rancher.sh
-      - sudo ./deploy_to_rancher.sh
+      # - sudo chmod +x ./deploy_to_rancher.sh
+      # - sudo ./deploy_to_rancher.sh
+      - sudo chmod +x ./prep_new_compose.sh
+      - sudo ./prep_new_compose.sh
