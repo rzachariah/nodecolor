@@ -3,7 +3,7 @@
 # TODO: this file should be obtained via wget from the circle.yml file
 # Performs a rolling upgrade to the target rancher environment
 
-if !$DEPLOY_ON_PASS; then
+if ! $DEPLOY_ON_PASS; then
     echo "to enable continuous deployment, set the DEPLOY_ON_PASS in the circleCI project settings";
     exit;
 fi
