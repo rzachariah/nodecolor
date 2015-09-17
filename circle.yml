@@ -18,17 +18,20 @@ deployment:
       # - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
       # - docker push robzhu/nodecolor
       # - install the rancher-upgrade-prep tool
-      - git clone https://github.com/robzhu/rancher-upgrade-prep prep
-      - ls -l
-      - cd prep
-      - ls -l
-      - npm install
-      - wget -O docker-compose.yml https://gist.githubusercontent.com/robzhu/c2f461b5454a5ac928f1/raw/50e142cd8dd47b651b8eb0ee6663235d41b63707/gistfile1.txt
-      - cat ./main.js
-      - node ./main.js
-      # - ls -l
-      - cat docker-compose-new.yml
-      - cd ..
-      - node ./upgrade.js
-      #- sudo chmod +x ./deploy_to_rancher.sh
-      #- sudo ./deploy_to_rancher.sh
+      # - git clone https://github.com/robzhu/rancher-upgrade-prep prep
+      # - mv package.json package_main.json
+      # - mv prep/main.js ./prep.js
+      # - mv prep/package.json ./package.json
+      # - npm install
+      # - wget -O docker-compose.yml https://gist.githubusercontent.com/robzhu/c2f461b5454a5ac928f1/raw/50e142cd8dd47b651b8eb0ee6663235d41b63707/gistfile1.txt
+      # - cat ./prep.js
+      # - node ./prep.js
+      # - cat docker-compose-new.yml
+
+      # - rm package.json 
+      # - mv package_main.json package.json
+
+      # - npm install
+      # - node ./upgrade.js
+      - sudo chmod +x ./deploy_to_rancher.sh
+      - sudo ./deploy_to_rancher.sh
