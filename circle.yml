@@ -1,6 +1,7 @@
 machine:
   services:
     - docker
+    - node
 
 dependencies:
   override:
@@ -27,7 +28,6 @@ deployment:
       - ls -l
       - cat docker-compose-new.yml
       - cd ..
-      - sudo chmod +x ./deploy.js
-      - sudo node ./deploy.js
+      - sudo node ./upgrade.js
       #- sudo chmod +x ./deploy_to_rancher.sh
       #- sudo ./deploy_to_rancher.sh
