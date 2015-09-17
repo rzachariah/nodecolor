@@ -25,7 +25,7 @@ deployment:
       - npm install
       - wget -O docker-compose.yml https://gist.githubusercontent.com/robzhu/c2f461b5454a5ac928f1/raw/50e142cd8dd47b651b8eb0ee6663235d41b63707/gistfile1.txt
       - ls -l
-      - sudo node main.js
+      - node ./main.js
       - ls -l
       - cat docker-compose-new.yml
       - cd ..
