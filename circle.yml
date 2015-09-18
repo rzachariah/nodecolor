@@ -21,8 +21,6 @@ deployment:
       # - install the rancher-upgrade-prep tool
       - git clone https://github.com/robzhu/rancher-upgrade-prep prep
       - cd prep && npm install
-      - ls -l prep
-      - wget -O docker-compose.yml https://gist.githubusercontent.com/robzhu/c2f461b5454a5ac928f1/raw/636d643787310d3ab658b2dd1dbb126114be6931/gistfile1.txt
-      - cat ./docker-compose.yml 
+      - curl -O -u $RANCHER_ACCESS_KEY:$RANCHER_SECRET_KEY RANCHER_COMPOSE_URL
+      - unzip composeconfig
       - node ./prep/rancher-upgrade.js ./docker-compose.yml $RANCHER_SERVICE_NAME robzhu/nodecolor:0.$CIRCLE_BUILD_NUM
-      - cat ./docker-compose.yml 
