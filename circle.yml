@@ -14,11 +14,11 @@ deployment:
   hub:
     branch: master
     commands:
-      - docker build -t robzhu/nodecolor:0.$CIRCLE_BUILD_NUM .
+      - docker build -t rzachariah/nodecolor:0.$CIRCLE_BUILD_NUM .
       - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-      - docker push robzhu/nodecolor:0.$CIRCLE_BUILD_NUM
+      - docker push rzachariah/nodecolor:0.$CIRCLE_BUILD_NUM
 
       # - install the rancher-upgrade tool
-      - git clone https://github.com/robzhu/rancher-upgrade prep
+      - git clone https://github.com/rzachariah/rancher-upgrade prep
       - cd prep && npm install
-      - node ./prep/rancher-upgrade.js $RANCHER_SERVICE_NAME robzhu/nodecolor:0.$CIRCLE_BUILD_NUM
+      - node ./prep/rancher-upgrade.js $RANCHER_SERVICE_NAME rzachariah/nodecolor:1.$CIRCLE_BUILD_NUM
