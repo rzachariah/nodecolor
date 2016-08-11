@@ -1,11 +1,12 @@
 FROM node:argon
 
+ENV PORT 80
 EXPOSE 80
 
-RUN mkdir /usr/nodecolor
-ADD . /usr/nodecolor
-WORKDIR /usr/nodecolor
-
+WORKDIR /app
+RUN mkdir -p /app
+ADD package.json /app
 RUN npm install
+ADD . /app
 
 ENTRYPOINT [ "node", "main.js" ]
