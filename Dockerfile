@@ -1,6 +1,6 @@
-FROM robzhu/nodejs
+FROM node:argon
 
-EXPOSE 3000
+EXPOSE 80
 
 RUN mkdir /usr/nodecolor
 ADD . /usr/nodecolor
